@@ -9,8 +9,8 @@ const Navbar = () => {
     const handleNavToggle = () => {
         setIsNavOpen(!isNavOpen);
     };
-    const {currentUser, logout} = useContext(Authcontext)
-    const handleLogout = () =>{
+    const { currentUser, logout } = useContext(Authcontext)
+    const handleLogout = () => {
         logout()
     }
     return (
@@ -80,7 +80,7 @@ const Navbar = () => {
                         Home
                     </NavLink>
                     <NavLink
-                        to="/Admission"
+                        to="/admission"
                         className={({ isActive }) =>
                             isActive ? 'text-orange-400 font-extrabold md:text-[23px] text-[19px]' : 'text-gray-800 font-semibold text-[23px] '
                         }
@@ -88,24 +88,14 @@ const Navbar = () => {
                         Admission
                     </NavLink>
                     <NavLink
-                        to="/My College"
+                        to="/mycollege"
                         className={({ isActive }) =>
                             isActive ? 'text-orange-400 font-extrabold md:text-[23px] text-[19px]' : 'text-gray-800 font-semibold text-[23px] '
                         }
                     >
                         My College
                     </NavLink>
-                    {
-                        currentUser &&
-                        <NavLink
-                            to="/dashboard"
-                            className={({ isActive }) =>
-                                isActive ? 'text-orange-400 font-extrabold md:text-[23px] text-[19px]' : 'text-gray-800 font-semibold text-[23px] '
-                            }
-                        >
-                            Dashboard
-                        </NavLink>
-                    }
+
                 </div>
                 <div className="hidden md:flex items-center ml-auto">
                     <div>
@@ -126,7 +116,7 @@ const Navbar = () => {
                             </button>
                         ) : (
                             <NavLink
-                                to="/login"
+                                to="/signup"
                                 className={({ isActive }) =>
                                     isActive ? 'text-orange-400 font-extrabold md:text-[23px] text-[19px]' : 'text-gray-800 font-semibold text-[23px] '
                                 }
@@ -172,12 +162,12 @@ const Navbar = () => {
                                         isActive ? 'text-orange-400 font-extrabold md:text-[23px] text-[19px]' : 'text-gray-600 font-semibold md:text-[23px] text-[19px]'
                                     }
                                 >
-                                    College
+                                  Admission
                                 </NavLink>
                             </div>
                             <div className=' mb-3'>
                                 <NavLink
-                                    to="/My College"
+                                    to="/mycollege"
                                     className={({ isActive }) =>
                                         isActive ? 'text-orange-400 font-extrabold md:text-[23px] text-[19px] ' : 'text-gray-600 font-semibold md:text-[23px] text-[19px]'
                                     }
@@ -185,18 +175,24 @@ const Navbar = () => {
                                     My College
                                 </NavLink>
                             </div>
-                            <div className=' mb-3'>
-                                <NavLink
-                                    to="/My College"
-                                    className={({ isActive }) =>
-                                        isActive ? 'text-orange-400 font-extrabold md:text-[23px] text-[19px] ' : 'text-gray-600 font-semibold md:text-[23px] text-[19px]'
-                                    }
-                                >
-                                    My College
-                                </NavLink>
+                            <div className="ml-8">
+                                {currentUser ? (
+                                    <button className="bg-red-600 font-extrabold text-white rounded-md py-2 px-2 mr-3" onClick={handleLogout}>
+                                        <FaSignOutAlt></FaSignOutAlt>
+                                    </button>
+                                ) : (
+                                    <NavLink
+                                        to="/signup"
+                                        className={({ isActive }) =>
+                                            isActive ? 'text-orange-400 font-extrabold md:text-[23px] text-[19px]' : 'text-gray-800 font-semibold text-[23px] '
+                                        }
+                                    >
+                                        <FaUserPlus className=' text-3xl mr-7' />
+                                    </NavLink>
+                                )}
                             </div>
                         </div>
-                       
+
                     </div>
                 </div>
             )}

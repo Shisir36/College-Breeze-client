@@ -1,4 +1,3 @@
-import { FaSearch } from "react-icons/fa";
 import backgroundImage from "../../../assets/banner-image/pang-yuhao-_kd5cxwZOK4-unsplash.jpg"
 const Banner = () => {
     return (
@@ -9,14 +8,6 @@ const Banner = () => {
                     Book Your Admission Today!
                     </p>
                 <h6 className=" md:mt-5 mt-3 md:text-xl">Discover a World of Opportunities.</h6>
-                <form className=" mt-10">
-                    <input type="text" placeholder="enter your keyword here" className=" md:px-36 md:py-4 py-2 px-3 rounded-[24px] relative text-black" />
-                    <div className=" md:absolute md:left-[350px]
-                    lg:left-[500px] md:top-[280px] w-0 hidden md:block lg:block">
-                    <FaSearch className=" text-black text-xl"/>
-                    </div>
-                    <input type="submit" value="Serach" className=" bg-orange-400 md:px-9 md:absolute md:left-[680px] md:top-[264px] md:py-3 py-[5px] px-5 lg:left-[820px]  rounded-[24px]" />
-                </form>
             </div>
 
         </div>
