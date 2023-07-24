@@ -15,10 +15,12 @@ import SignUp from './Signup/Signup';
 import Login from './Login/Login';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import MyCollege from './Components/My college/MyCollege ';
+import ErrorPage from './Errorpage/ErrorPage';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement:<ErrorPage/>,
     children: [
       {
         path: "/",

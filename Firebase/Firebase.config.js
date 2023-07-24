@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDGSR9qCwZkq5lh-DfUQvq3BwwPi3tOb98",
-  authDomain: "collage-breeze-server.firebaseapp.com",
-  projectId: "collage-breeze-server",
-  storageBucket: "collage-breeze-server.appspot.com",
-  messagingSenderId: "630132524495",
-  appId: "1:630132524495:web:2f5290de84847c3059beba"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
 };
 
 // Initialize Firebase

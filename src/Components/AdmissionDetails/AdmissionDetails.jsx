@@ -20,7 +20,7 @@ const AdmissionDetails = () => {
         e.preventDefault();
         // Check if currentUser is not null or undefined
         // Perform the POST request to add admission details
-        fetch(`http://localhost:5000/admissionDetails/${id}`, {
+        fetch(`https://college-breezre-server-shisir36.vercel.app/admissionDetails/${id}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

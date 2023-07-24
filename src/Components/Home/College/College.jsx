@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const College = () => {
@@ -7,7 +7,7 @@ const College = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/college")
+    fetch("https://college-breezre-server-shisir36.vercel.app/college")
       .then((res) => res.json())
       .then((data) => setColleges(data.slice(0, 3)));
   }, []);
@@ -33,7 +33,7 @@ const College = () => {
             placeholder="Search by college name"
             value={searchQuery}
             onChange={handleSearchChange}
-            className="border-2 border-orange-400 rounded-md px-4 py-2 mr-2"
+            className="border-2 border-orange-400 rounded-md px-6 py-2 mr-2"
           />
         </form>
       </div>

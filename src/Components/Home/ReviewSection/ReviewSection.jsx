@@ -7,7 +7,7 @@ const ReviewSection = () => {
 
     useEffect(() => {
         // Fetch college reviews from the backend
-        fetch("http://localhost:5000/collegereview")
+        fetch("https://college-breezre-server-shisir36.vercel.app/collegereview")
             .then((res) => res.json())
             .then((data) => setCollegeReviews(data))
             .catch((error) => {

@@ -19,7 +19,7 @@ const MyCollege = () => {
         // Check if the college ID is available
         if (collegeId) {
             // Send a POST request to add the review and comment to the specific college
-            fetch(`http://localhost:5000/addReview/${collegeId}`, {
+            fetch(`https://college-breezre-server-shisir36.vercel.app/addReview/${collegeId}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const MyCollege = () => {
 
     useEffect(() => {
         // Fetch college details based on the user's email from the backend
-        fetch(`http://localhost:5000/mycollage?email=${currentUser?.email}`)
+        fetch(`https://college-breezre-server-shisir36.vercel.app/mycollage?email=${currentUser?.email}`)
             .then((res) => res.json())
             .then((data) => setCollegeDetails(data))
             .catch((error) => {

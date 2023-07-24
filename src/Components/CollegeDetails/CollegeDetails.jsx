@@ -6,7 +6,7 @@ const CollegeDetails = () => {
     const [collegeDetails, setCollegeDetails] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/details/${id}`)
+        fetch(`https://college-breezre-server-shisir36.vercel.app/details/${id}`)
             .then((res) => res.json())
             .then((data) => setCollegeDetails(data)); // Assuming the API returns an array of colleges, and we only need the first one
     }, [id]);
